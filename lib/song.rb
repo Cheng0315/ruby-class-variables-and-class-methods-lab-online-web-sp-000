@@ -20,7 +20,7 @@ class Song
 
   def self.genres
     unique_genres = []
-    
+
     @@genres.each do |genre|
       unique_genres[genre] == nil ? unique_genres[genre] = 1 : unique_genres[genre] += 1
     end
@@ -30,7 +30,7 @@ class Song
 
   def self.artists
     unique_artists = []
-    
+
     @@genres.each do |artist|
       unique_artists[artist] == nil ? unique_artists[artist] = 1 : unique_artists[artist] += 1
     end
