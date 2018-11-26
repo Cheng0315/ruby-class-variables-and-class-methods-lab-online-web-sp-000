@@ -56,7 +56,7 @@ class Song
     artists_hash = {}
 
     @@artists.each do |artist|
-      artists_hash[artist] == nil ? artists_hash[artisst] = 1 : artists_hash[artist] += 1
+      artists_hash[artist] == nil ? artists_hash[artist] = 1 : artists_hash[artist] += 1
     end
 
     artists_hash
