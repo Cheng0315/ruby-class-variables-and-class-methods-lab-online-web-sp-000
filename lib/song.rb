@@ -33,7 +33,7 @@ class Song
   def self.artists
     unique_artists = []
 
-    @@genres.each do |artist|
+    @@artists.each do |artist|
       if unique_artists.include?(artist) == false
         unique_artists << artist
       end
