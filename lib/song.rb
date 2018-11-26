@@ -5,22 +5,10 @@ class Song
   
   attr_reader :artist, :genre
   
-  def initialize
+  def initialize(song_name, artist, genre)
     @@song_counter += 1
-  end
-
-  def artist=(artist)
-    @artist = artist
     @@artists << artist
-  end
-
-  def genre=(genre)
-    @genre = genre
     @@genres << genre
-  end
-
-  def self.count 
-    @@song_count
   end
 
   def self.count 
@@ -32,12 +20,22 @@ class Song
   end
 
   def self.genre_count
-    genre_hash = {}
+    @genre_hash = {}
 
     @@genres.each do |genre|
       hash[genre] == nil ? hash[genre] = 1 : hash[genre] += 1
     end
 
-    genre_hash
+    @genre_hash
+  end
+
+  def self.artist_count
+    @artist_hash = {}
+
+    @@artists.each do |artist|
+      hash[artist] == nil ? hash[artisst] = 1 : hash[artist] += 1
+    end
+
+    @genre_hash
   end
 end
