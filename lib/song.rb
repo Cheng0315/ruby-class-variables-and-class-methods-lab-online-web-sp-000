@@ -22,7 +22,9 @@ class Song
     unique_genres = []
 
     @@genres.each do |genre|
-      unique_genres[genre] == nil ? unique_genres[genre] = 1 : unique_genres[genre] += 1
+      unique_genres.include?(genre) == false
+        unique_genres << genre
+      end
     end
 
     unique_genres
@@ -32,7 +34,9 @@ class Song
     unique_artists = []
 
     @@genres.each do |artist|
-      unique_artists[artist] == nil ? unique_artists[artist] = 1 : unique_artists[artist] += 1
+      if unique_artists.include?(artist) == false
+        unique_artists << artist
+      end
     end
 
     unique_artists
